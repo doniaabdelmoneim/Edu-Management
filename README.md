@@ -4,7 +4,7 @@
 
 
 <div align="center">
-  <img src="./wwwroot/assets/department.png/800x400/4A5568/FFFFFF?text=Department+Preview" alt="Department Preview" width="70%">
+  <img src="./wwwroot/assets/department.png/" alt="Department Preview" width="70%">
   <p><em>Department Interface</em></p>
 </div>
 
