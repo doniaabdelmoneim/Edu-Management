@@ -1,4 +1,4 @@
-﻿# EDU- Student Management System with Admin Dashboard
+# EDU- Student Management System with Admin Dashboard
 
 ![EDU Banner](./wwwroot/assets/home.png) 
 
@@ -16,8 +16,8 @@ EDU is a comprehensive school management system featuring robust authentication/
 
 ### 🔐 Authentication & Authorization
 <div align="center">
-  <img src="./wwwroot/assets/login.png/600x300/4A5568/FFFFFF?text=Login+Screen" alt="Login Screen" width="50%">
-  <img src="./wwwroot/assets/register.png/600x300/4A5568/FFFFFF?text=Registration+Screen" alt="Registration Screen" width="50%">
+  <img src="./wwwroot/assets/login.png/" alt="Login Screen" width="50%">
+  <img src="./wwwroot/assets/register.png/" alt="Registration Screen" width="50%">
 
 </div>
 
@@ -62,7 +62,7 @@ dotnet add package Microsoft.AspNetCore.Identity.UI
 # Run migrations
 dotnet ef database update
 
-📄 License
+### 📄 License
 MIT License - See LICENSE for details.
 
 Developed with ❤️ by Donia
