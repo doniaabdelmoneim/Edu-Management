@@ -62,7 +62,8 @@ dotnet add package Microsoft.AspNetCore.Identity.UI
 # Run migrations
 dotnet ef database update
 
-### 📄 License
+
+## 📄 License
 MIT License - See LICENSE for details.
 
 Developed with ❤️ by Donia
