@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Create Student";
+    SelectList depts = new SelectList (ViewBag.depts, "deptId", "DeptName");
+}
+@model Student
+
+<div class="container mb-2">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white p-3">
+                    <h5 class="mb-0"><i class="fas fa-user-plus me-2"></i>Create New Student</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+            <div class="form-group accept-policy  mb-3">
+                 <label asp-for="Name" class="form-label">Student Name</label>
+                <input  class="form-control" asp-for="Name" placeholder="Enter Student Name">
+                @* tag  helper when  *@
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group mb-3">
+                            <label asp-for="Age" class="form-label">Student Age</label>
+                            <input class="form-control" asp-for="Age" placeholder="Enter Student Age">
+                <span asp-validation-for="Age"></span>
+
+            </div>
+            <div class="form-group  mb-3">
+                 <label for="studentEmail" class="form-label">Email Address</label>
+
+                <input  class="form-control" asp-for="Email" placeholder="Enter Student Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group  mb-3">
+                 <label asp-for="password" class="form-label">Password</label>
+                <input  class="form-control" asp-for="password" placeholder="Enter  password">
+                <span asp-validation-for="password"></span>
+            </div>
+            <div class="form-group  mb-2">
+                 <label asp-for="password" class="form-label">Password</label>
+                <input class="form-control" asp-for="Cpassword" placeholder="Confirm password">
+                <span asp-validation-for="Cpassword"></span>
+            </div>
+
+                        <div class="mb-4">
+                            <label asp-for="deptId" class="form-label fw-semibold">
+                                <i class="fas fa-building me-1"></i>Department
+                            </label>
+                            <select asp-for="deptId" asp-items="depts" class="form-select py-2">
+                                <option value="">Select Department</option>
+                            </select>
+                            <span asp-validation-for="deptId" class="text-danger small"></span>
+                        </div>
+
+            <div class="d-grid gap-2">
+                 <button type="submit" class="btn btn-primary p-2"  value="add">
+                      <i class="fas fa-save me-2"></i>Submit </button>
+                <a asp-action="Index" class="btn btn-outline-secondary p-2">
+                       <i class="fas fa-arrow-left me-2"></i>Back to List </a>
+             </div>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @section scripts{
+          <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+           <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    }
+        

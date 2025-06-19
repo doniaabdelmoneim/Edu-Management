@@ -1,0 +1,149 @@
+## ASP.NET Core and Visual Studio specific
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+*.njsproj
+*.sw?
+.vs/
+.vscode/
+*.launchsettings.json
+*.sql
+*.pubxml
+*.publishproj
+*.pidb
+*.db
+*.db-shm
+*.db-wal
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+## NuGet Packages
+*.nupkg
+.nuget/
+packages/
+
+## Ignore local NuGet feed
+**/[Nn]uget[Ll]ocal/
+
+## Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## Azure
+*.azurePubxml
+*.pubxml
+*.publishsettings
+
+## Rider
+.idea/
+*.sln.iml
+
+## VS Code
+.history/
+*.code-workspace
+
+## User-specific files
+*.rsuser
+*.csv
+*.dat
+*.orig
+*.log
+*.sqlite
+*.bak
+*.pid
+*.DS_Store
+Thumbs.db
+
+## Build output
+wwwroot/dist/
+wwwroot/lib/
+wwwroot/css/min/
+wwwroot/js/min/
+*.min.js
+*.min.css
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+.coverage
+
+## SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+## Entity Framework migrations (except Configuration)
+Migrations/*.Designer.cs
+Migrations/*.resx
+!Migrations/Configuration.cs
+
+## App specific
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Private.json
+appsettings.Staging.json
+appsettings.Production.json
+appsettings.*.json
+secrets.json
+*.Web.config
+*.pubxml
+
+## Logs
+*.log
+*.log.*
+logs/
+
+## VS Code launch
+launch.json
+
+## Visual Studio cache directory
+.vs/
+
+## Azure Functions localsettings file
+local.settings.json
+
+## MacOS
+.DS_Store
+
+## JetBrains Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+
+## MS SQL Server
+*.mdf
+*.ldf
+
+## Redis
+*.rdb
+
+## Docker
+docker-compose.override.yml
+
+## IDE - Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

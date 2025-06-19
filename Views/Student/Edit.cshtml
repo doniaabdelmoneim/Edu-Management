@@ -1,0 +1,111 @@
+﻿@model Student
+@{
+    SelectList depts = new SelectList (ViewBag.depts, "deptId", "DeptName");
+    ViewBag.Title = "Edit Student";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">
+                        <i class="fas fa-user-edit me-2"></i>Edit Student
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" class="needs-validation" novalidate>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-4">
+                            <label asp-for="Name" class="form-label fw-semibold">
+                                <i class="fas fa-user me-1"></i>Full Name
+                            </label>
+                            <input type="text" class="form-control py-2" asp-for="Name"
+                                   placeholder="Enter student name" required>
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Age" class="form-label fw-semibold">
+                                <i class="fas fa-calendar-alt me-1"></i>Age
+                            </label>
+                            <input type="number" class="form-control py-2" asp-for="Age"
+                                   placeholder="Enter age" min="16" max="99" required>
+                            <span asp-validation-for="Age" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Email" class="form-label fw-semibold">
+                                <i class="fas fa-envelope me-1"></i>Email Address
+                            </label>
+                            <input type="email" class="form-control py-2" asp-for="Email"
+                                   placeholder="Enter email" required>
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4 position-relative">
+                            <label asp-for="password" class="form-label fw-semibold">
+                                <i class="fas fa-lock me-1"></i>New Password
+                            </label>
+                            <input type="password" class="form-control py-2" asp-for="password"
+                                   placeholder="Enter new password" id="passwordField">
+                            <span asp-validation-for="password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4 position-relative">
+                            <label asp-for="Cpassword" class="form-label fw-semibold">
+                                <i class="fas fa-lock me-1"></i>Confirm Password
+                            </label>
+                            <input type="password" class="form-control py-2" asp-for="Cpassword"
+                                   placeholder="Confirm password" id="confirmPasswordField">
+                            <span asp-validation-for="Cpassword" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="deptId" class="form-label fw-semibold">
+                                <i class="fas fa-building me-1"></i>Department
+                            </label>
+                            <select asp-for="deptId" asp-items="depts" class="form-select py-2">
+                                <option value="">Select Department</option>
+                            </select>
+                            <span asp-validation-for="deptId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-times me-2"></i>Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Update Student
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script>
+
+        // Bootstrap form validation
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+}

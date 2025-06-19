@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero-section  text-black py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-3 fw-bold mb-4">Welcome to Edu Management</h1>
+                    <p class="lead mb-4">Streamline your educational institution's management with our powerful ASP.NET Core solution</p>
+                    <div class="d-flex gap-3">
+                        <a asp-controller="Student" asp-action="Index" class="btn btn-dark btn-lg px-4">
+                            <i class="fas fa-users me-2"></i>View Students
+                        </a>
+                        <a asp-controller="Department" asp-action="Index" class="btn btn-outline-primary btn-lg px-4">
+                            <i class="fas fa-building me-2"></i>View Departments
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="~/assets/technology.png" alt="Education Illustration" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-4">
+                                <i class="fas fa-user-graduate fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Student Management</h3>
+                            <p class="mb-0">Easily track and manage student records, grades, and attendance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-4">
+                                <i class="fas fa-building fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Department Control</h3>
+                            <p class="mb-0">Organize and manage academic departments efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-4">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Advanced Analytics</h3>
+                            <p class="mb-0">Get insights with comprehensive reporting tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technology Section -->
+    <section class="bg-light py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="~/assets/technology.png" width="600px" height="400px" alt="Technology Illustration" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Built with Modern Technologies</h2>
+                    <p class="lead mb-4">Our platform leverages the power of ASP.NET Core to deliver a robust and scalable solution.</p>
+                    <p>Learn about <a href="assets/TechnologyIllustration.avif" class="text-decoration-none fw-bold">building Web apps with ASP.NET Core</a>.</p>
+                    <div class="tech-stack mt-4">
+                        <span class="badge bg-dark me-2 mb-2 p-2">ASP.NET Core</span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">Bootstrap 5</span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">Entity Framework</span>
+                        <span class="badge bg-dark me-2 mb-2 p-2">SQL Server</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

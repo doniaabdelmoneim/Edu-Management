@@ -1,0 +1,79 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Edit Department";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">
+                            <i class="fas fa-edit me-2"></i>Edit Department
+                        </h3>
+                        <span class="badge bg-light text-primary fs-6">ID: @Model.deptId</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="post" class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label asp-for="DeptName" class="form-label fw-semibold">
+                                <i class="fas fa-building me-1"></i>Department Name
+                            </label>
+                            <input type="text" class="form-control py-2" asp-for="DeptName"
+                                   placeholder="Enter department name" required>
+                            <span asp-validation-for="DeptName" class="text-danger small"></span>
+                            <div class="invalid-feedback">
+                                Please provide a department name
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="capacity" class="form-label fw-semibold">
+                                <i class="fas fa-users me-1"></i>Department Capacity
+                            </label>
+                            <input type="number" class="form-control py-2" asp-for="capacity"
+                                   placeholder="Enter capacity" min="1" max="500" required>
+                            <span asp-validation-for="capacity" class="text-danger small"></span>
+                            <div class="invalid-feedback">
+                                Please enter a valid capacity (1-500)
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-times me-2"></i>Cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save me-2"></i>Update Department
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script>
+        // Bootstrap form validation
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+}
